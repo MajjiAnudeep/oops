@@ -1,7 +1,6 @@
 package com.demo.oops.service.messenger.impl;
 
 import com.demo.oops.apimodel.messenger.Message;
-import com.demo.oops.apimodel.messenger.User;
 import com.demo.oops.constant.Constants;
 import com.demo.oops.factory.messenger.UserFactory;
 import com.demo.oops.service.messenger.MessagingSystem;
