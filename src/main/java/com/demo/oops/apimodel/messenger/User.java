@@ -3,7 +3,6 @@ package com.demo.oops.apimodel.messenger;
 import com.demo.oops.constant.Constants;
 import com.demo.oops.factory.messenger.MessageFactory;
 import com.demo.oops.service.messenger.MessengerService;
-import lombok.AllArgsConstructor;
 import java.util.List;
 
 public class User implements Runnable {
