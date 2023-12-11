@@ -1,10 +1,11 @@
 package com.demo.oops.factory.messenger;
 
-import com.demo.oops.apimodel.messenger.Message;
+import com.demo.oops.apimodel.messenger.IMessage;
 import com.demo.oops.apimodel.messenger.TextMessage;
+import com.demo.oops.constant.MessageType;
 
 public class MessageFactory {
-    public static Message createMessage(MessageType type, String content) {
+    public static IMessage createMessage(MessageType type, String content) {
         switch (type) {
             case TEXT:
                 return TextMessage.of(content);
@@ -13,11 +14,5 @@ public class MessageFactory {
             default:
                 throw new IllegalArgumentException("Type not supported yet: " + type);
         }
-    }
-
-    public enum MessageType {
-        TEXT,
-        MULTIMEDIA,
-        GROUP;
     }
 }

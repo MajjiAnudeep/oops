@@ -1,12 +1,12 @@
 package com.demo.oops.apimodel.messenger;
 
-public interface Message extends Comparable<Message> {
+public interface IMessage extends Comparable<IMessage> {
     int getId();
     String getContent();
     long getTimestamp();
 
     @Override
-    default int compareTo(Message other) {
+    default int compareTo(IMessage other) {
         return Long.compare(this.getTimestamp(), other.getTimestamp());
     }
 }

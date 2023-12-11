@@ -5,7 +5,7 @@ import lombok.Getter;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Getter
-public class TextMessage implements Message {
+public class TextMessage implements IMessage {
     private static final AtomicInteger idGenerator = new AtomicInteger();
     private final int id;
     private final String content;
@@ -22,7 +22,7 @@ public class TextMessage implements Message {
     }
 
     @Override
-    public int compareTo(Message other) {
+    public int compareTo(IMessage other) {
         return Long.compare(this.getTimestamp(), other.getTimestamp());
     }
 }
