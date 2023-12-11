@@ -19,9 +19,10 @@ public class UserMessageController {
     private final UserMessageService userMessageService;
 
     @GetMapping()
-    public ResponseEntity<StartMessagingResponse> sendMessages(@RequestParam(value = "users", required = false, defaultValue = "5") Integer users)
-            throws Exception {
-        StartMessagingResponse response = userMessageService.startMessaging(users);
+    public ResponseEntity<StartMessagingResponse> sendMessages(
+            @RequestParam(value = "users", required = false, defaultValue = "5") Integer users,
+            @RequestParam(value = "messagesPerUser", required = false, defaultValue = "5") Integer messagesPerUser) {
+        StartMessagingResponse response = userMessageService.startMessaging(users, messagesPerUser);
         return ResponseEntity.ok(response);
     }
 }

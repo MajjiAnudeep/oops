@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UserMessageService {
-    StartMessagingResponse startMessaging(int users);
+    StartMessagingResponse startMessaging(int users, int messagesPerUser);
 }
